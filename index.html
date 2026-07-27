@@ -255,6 +255,7 @@
         header .navbar {
             padding: 10px 0;
         }
+        /* ====== LOGO WITH LEAF ABOVE 'I' - NO ANIMATION ====== */
         header .navbar-brand {
             display: inline-block;
             padding: 5px 0;
@@ -263,10 +264,46 @@
             font-weight: 900;
             color: #2d7a3a;
             letter-spacing: 1px;
+            text-decoration: none;
+            position: relative;
         }
-        header .navbar-brand span {
+        header .navbar-brand .logo-text {
+            display: inline-flex;
+            align-items: center;
+            vertical-align: middle;
+        }
+        header .navbar-brand .logo-text .leaf-char {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            line-height: 1;
+        }
+        header .navbar-brand .logo-text .leaf-char .leaf-icon {
+            font-size: 18px;
+            color: #6abe52;
+            margin-bottom: -2px;
+            display: block;
+            transform-origin: center;
+            filter: drop-shadow(0 2px 8px rgba(106, 190, 82, 0.2));
+        }
+        header .navbar-brand .logo-text .leaf-char .letter {
+            font-size: 22px;
+            font-weight: 900;
+            color: #2d7a3a;
+            line-height: 1;
+            display: block;
+        }
+        header .navbar-brand .logo-text .rest {
+            font-size: 22px;
+            font-weight: 900;
+            color: #2d7a3a;
+        }
+        header .navbar-brand .logo-text .rest span {
             color: #6abe52;
         }
+
         header .navbar-toggle {
             display: none;
             background: none;
@@ -1439,6 +1476,13 @@
             .counter-box .number {
                 font-size: 40px;
             }
+            header .navbar-brand .logo-text .leaf-char .leaf-icon {
+                font-size: 15px;
+            }
+            header .navbar-brand .logo-text .leaf-char .letter,
+            header .navbar-brand .logo-text .rest {
+                font-size: 20px;
+            }
         }
 
         @media (max-width: 767px) {
@@ -1559,6 +1603,13 @@
             .counter-box .number {
                 font-size: 34px;
             }
+            header .navbar-brand .logo-text .leaf-char .leaf-icon {
+                font-size: 13px;
+            }
+            header .navbar-brand .logo-text .leaf-char .letter,
+            header .navbar-brand .logo-text .rest {
+                font-size: 17px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1623,6 +1674,13 @@
             .counter-box .icon {
                 font-size: 36px;
             }
+            header .navbar-brand .logo-text .leaf-char .leaf-icon {
+                font-size: 11px;
+            }
+            header .navbar-brand .logo-text .leaf-char .letter,
+            header .navbar-brand .logo-text .rest {
+                font-size: 15px;
+            }
         }
     </style>
 </head>
@@ -1632,7 +1690,16 @@
     <header>
         <div class="container-fluid">
             <nav class="navbar">
-                <a class="navbar-brand" href="#home">DYNAMIC<span>RC</span></a>
+                <a class="navbar-brand" href="#home">
+                    <span class="logo-text">
+                        <span class="rest">DYNAM</span>
+                        <span class="leaf-char">
+                            <i class="fas fa-leaf leaf-icon"></i>
+                            <span class="letter">I</span>
+                        </span>
+                        <span class="rest"><span>C</span>RC</span>
+                    </span>
+                </a>
                 <button class="navbar-toggle" id="navToggle" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
